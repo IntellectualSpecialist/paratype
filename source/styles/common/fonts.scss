@@ -1,1 +1,12 @@
-/* здесь подключите шрифты */
+@font-face {
+  font-family: "Pragmatica Next VF";
+  font-weight: 100 900;
+  font-stretch: 10% 400%;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../../fonts/pragmatica-next_vf.woff2") format("woff2-variations"),
+    url("../../fonts/pragmatica-next_vf.woff2") format("woff2"),
+    url("../../fonts/pragmatica-next_vf.woff") format("woff-variations"),
+    url("../../fonts/pragmatica-next_vf.woff") format("woff");
+}

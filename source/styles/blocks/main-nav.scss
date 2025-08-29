@@ -1,0 +1,9 @@
+.main-nav__topics {
+  @include list-reset;
+}
+
+.main-nav__topic {
+  &--desktop-hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+.search {
+  display: flex;
+  padding: 10px;
+  padding-right: 0;
+  min-height: 119px;
+  min-width: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      opacity: 0.7;
+    }
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}

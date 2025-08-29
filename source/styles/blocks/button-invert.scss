@@ -1,0 +1,105 @@
+.button-invert {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 21px;
+  width: fit-content;
+  padding: 22px 32px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-black;
+  background-color: transparent;
+  border: none;
+  border-radius: 80px;
+  text-decoration: none;
+  transition:
+    color $trans-default,
+    background-color $trans-default,
+    opacity $trans-default;
+  cursor: pointer;
+  user-select: none;
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      color: $color-accent-main;
+    }
+  }
+
+  &:focus-visible {
+    color: $color-accent-main;
+  }
+
+  &:active {
+    color: $color-accent-main;
+    opacity: 0.7;
+  }
+
+  &--active {
+    color: $color-white;
+    background-color: $color-accent-main;
+    pointer-events: none;
+
+    .button-invert__dots {
+      opacity: 1;
+    }
+  }
+
+  &--secondary {
+    padding-right: 0;
+    padding-left: 0;
+    min-width: fit-content;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-nobel;
+  }
+
+  &--small {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &--disabled,
+  &:disabled {
+    color: $color-nobel;
+    pointer-events: none;
+  }
+}
+
+.button-invert__dots {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity $trans-default;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $color-black;
+  }
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
+
+  &--bottom {
+    &::before,
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.button-invert__accent {
+  color: $color-accent-main;
+}

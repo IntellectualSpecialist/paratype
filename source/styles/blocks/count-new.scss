@@ -1,0 +1,11 @@
+.count-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  margin: 0;
+  color: $color-white;
+  border-radius: 20px;
+  background-color: $color-accent-main;
+}
