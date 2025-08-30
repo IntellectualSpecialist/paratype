@@ -1,0 +1,14 @@
+.categories {
+  padding-top: 20px;
+}
+
+.categories__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categories__item {
+  flex-basis: 175px;
+}

@@ -237,10 +237,13 @@
               <li class="promo__item slider__slide">
                 <a class="promo-card promo-card--primary" href="#">
                   <header class="promo-card__header">
-                    <p class="promo-card__count">280</p>
-                    <h3 class="promo-card__title">Распродажа</h3>
+                    <p class="promo-card__count count">280</p>
+                    <h3 class="promo-card__title title-small">Распродажа</h3>
 
-                    <p class="promo-card__count-new count-new">45</p>
+                    <p class="promo-card__count-new count count--new">
+                      <span class="visually-hidden">Новых:</span>
+                      <span>45</span>
+                    </p>
                   </header>
 
                   <p class="promo-card__lead">30&#8212;50%</p>
@@ -250,14 +253,223 @@
               <li class="promo__item slider__slide">
                 <a class="promo-card promo-card--secondary" href="#">
                   <header class="promo-card__header">
-                    <p class="promo-card__count">20</p>
-                    <h3 class="promo-card__title">Хиты продаж</h3>
+                    <p class="promo-card__count count">20</p>
+                    <h3 class="promo-card__title title-small">Хиты продаж</h3>
                   </header>
 
                   <p class="promo-card__lead">Pragmatica Next</p>
                 </a>
               </li>
             </ul>
+
+            <ul class="slider__pagination">
+              <li class="slider__pagination-item">
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 1</span>
+                </button>
+              </li>
+
+              <li class="slider__pagination-item">
+                <button class="slider__pagination-button" type="button">
+                  <span class="visually-hidden">Слайд 2</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <h2 class="visually-hidden">Категории</h2>
+        <div class="container">
+          <div class="categories__list-wrapper">
+            <ul class="categories__list">
+              <li class="categories__item">
+                <a class="category-card category-card--grotesque" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">340</p>
+                    <p class="category-card__count-new count count--new">
+                      <span class="visually-hidden">Новых:</span>
+                      <span>6</span>
+                    </p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Гротески</h3>
+
+                  <div class="category-card__image">
+                    <img width="102" height="59" src="images/letter-1.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--antiqua" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">89</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Антиквы</h3>
+
+                  <div class="category-card__image">
+                    <img width="95" height="57" src="images/letter-2.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--slab-serif" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">129</p>
+                    <p class="category-card__count-new count count--new">
+                      <span class="visually-hidden">Новых:</span>
+                      <span>2</span>
+                    </p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Брусковые</h3>
+
+                  <div class="category-card__image">
+                    <img width="94" height="55" src="images/letter-3.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--accident" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">278</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Акцидентные</h3>
+
+                  <div class="category-card__image">
+                    <img width="65" height="75" src="images/letter-4.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--handwritten" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">23</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Рукописные</h3>
+
+                  <div class="category-card__image">
+                    <img width="91" height="96" src="images/letter-5.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--non-alpha" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">8</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Неалфавитные</h3>
+
+                  <div class="category-card__image">
+                    <img width="136" height="63" src="images/letter-6.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--monospaced" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">280</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Моноширинные</h3>
+
+                  <div class="category-card__image">
+                    <img width="76" height="67" src="images/letter-7.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a class="category-card category-card--historical" href="#">
+                  <header class="category-card__header">
+                    <p class="category-card__count count">56</p>
+                  </header>
+
+                  <h3 class="category-card__title title-small">Исторические</h3>
+
+                  <div class="category-card__image">
+                    <img width="93" height="52" src="images/letter-8.svg" alt="Пример шрифта на строчной и прописной букве «А».">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="fonts">
+        <h2 class="visually-hidden">Шрифты</h2>
+        <div class="container">
+          <div class="tabs layout-switch">
+            <header class="fonts__header">
+              <div class="fonts__options custom-select">
+                <button class="custom-select__trigger"type="button">Все новинки</button>
+                <ul class="custom-select__options tabs__list">
+                  <li class="custom-select__item tabs__item">
+                    <button class="custom-select__option button-invert button-invert--active" data-value="all" data-option-id="0" type="button">
+                      <span class="button-invert__dots button-invert__dots--top"></span>
+                      <span>Все новинки</span>
+                      <span class="button-invert__dots button-invert__dots--bottom"></span>
+                    </button>
+                  </li>
+                  <li class="custom-select__item tabs__item">
+                    <button class="custom-select__option button-invert" data-value="sale" data-option-id="1" type="button">
+                      <span class="button-invert__dots button-invert__dots--top"></span>
+                      <span>Распродажа</span>
+                      <span class="button-invert__dots button-invert__dots--bottom"></span>
+                    </button>
+                  </li>
+                  <li class="custom-select__item tabs__item">
+                    <button class="custom-select__option button-invert" data-value="recommend" data-option-id="2" type="button">
+                      <span class="button-invert__dots button-invert__dots--top"></span>
+                      <span>Рекомендуем</span>
+                      <span class="button-invert__dots button-invert__dots--bottom"></span>
+                    </button>
+                  </li>
+                  <li class="custom-select__item tabs__item">
+                    <button class="custom-select__option button-invert" data-value="bestsellers" data-option-id="3" type="button">
+                      <span class="button-invert__dots button-invert__dots--top"></span>
+                      <span>Бестселлеры</span>
+                      <span class="button-invert__dots button-invert__dots--bottom"></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="fonts__layout-switcher layout-switcher">
+                <span class="visually-hidden">Переключить раскладку карточек</span>
+                <ul class="layout-switcher__list">
+                  <li class="layout-switcher__item">
+                    <button class="layout-switcher__button layout-switcher__button--active" type="button">
+                      <span class="visually-hidden">Сетка</span>
+                    </button>
+                  </li>
+
+                  <li class="layout-switcher__item">
+                    <button class="layout-switcher__button layout-switcher__button--active" type="button">
+                      <span class="visually-hidden">Список</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </header>
+
+            <div class="tabs__content">
+              <div class="tabs__tab" data-id="0">
+
+              </div>
+            </div>
           </div>
         </div>
       </section>

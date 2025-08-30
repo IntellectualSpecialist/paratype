@@ -5,12 +5,21 @@
   width: 100%;
   height: auto;
   padding: 10px;
+  padding-bottom: 80px;
   aspect-ratio: 760/440;
   text-decoration: none;
   color: inherit;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-width: none;
   transition: opacity $trans-default;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
 
   @media (hover: hover) {
     &:hover:not(:active) {
@@ -26,7 +35,6 @@
     opacity: 0.6;
   }
 
-
   &--primary {
     color: $color-white-smoke;
     background-color: $color-black;
@@ -38,14 +46,20 @@
         url("../../images/promo-1@1x.png") 1x
       );
 
-    .promo-card__header {
-      margin-bottom: 142px;
-    }
-
     .promo-card__lead {
       font-weight: 600;
       font-size: 60px;
       line-height: 40px;
+    }
+
+    @mixin vp-920 {
+      background-image:
+        image-set(
+          url("../../images/promo-1-mobile@2x.webp") type("image/webp") 2x,
+          url("../../images/promo-1-mobile@1x.webp") type("image/webp") 1x,
+          url("../../images/promo-1-mobile@2x.png") 2x,
+          url("../../images/promo-1-mobile@1x.png") 1x
+        );
     }
   }
 
@@ -58,10 +72,6 @@
         url("../../images/promo-2@2x.png") 2x,
         url("../../images/promo-2@1x.png") 1x
       );
-
-    .promo-card__header {
-      margin-bottom: 92px;
-    }
 
     .promo-card__lead {
       width: min-content;
@@ -88,6 +98,7 @@
 .promo-card__header {
   display: flex;
   align-items: flex-start;
+  min-height: 40px;
   padding-left: 11px;
 }
 
@@ -95,12 +106,6 @@
   position: absolute;
   bottom: 30px;
   left: 50%;
-  margin: 0;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.01em;
   transform: translateX(-50%);
 }
 
@@ -115,8 +120,12 @@
 }
 
 .promo-card__lead {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
   width: fit-content;
   margin: 0 auto;
+  padding-top: 17px;
   color: $color-accent-main;
   text-transform: uppercase;
   text-align: center;
