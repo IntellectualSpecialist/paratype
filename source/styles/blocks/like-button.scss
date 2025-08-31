@@ -1,0 +1,39 @@
+.like-button {
+  position: relative;
+  padding: 0;
+  min-width: 14px;
+  min-height: 14px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      opacity: 0.7;
+    }
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    mask-image: url("../../icons/heart-icon.svg");
+    background-color: $color-black;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,23 @@
+.fonts {
+  padding-top: 30px;
+}
+
+.fonts__header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.fonts__categories {
+  margin-right: auto;
+  max-width: 1365px;
+}
+
+.fonts__layout-switcher {
+  margin-top: 38px;
+}
+
+.fonts__list {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}

@@ -1,0 +1,20 @@
+.tabs__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border: 1px solid $color-white-smoke;
+}
+
+.tabs__item {
+  border-right: 1px solid $color-white-smoke;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.tabs__button {
+  min-width: 159px;
+  min-height: 78px;
+}

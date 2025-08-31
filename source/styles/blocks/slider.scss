@@ -1,3 +1,7 @@
+.slider__wrapper {
+  @include list-reset;
+}
+
 .slider__pagination {
   display: none;
 }

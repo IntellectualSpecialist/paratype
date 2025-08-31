@@ -27,7 +27,7 @@
             <li class="user-menu__item">
               <a class="user-menu__link" href="#">
                 <span class="visually-hidden">Понравилось</span>
-                <svg class="user-menu__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#heart-icon"></use>
                 </svg>
                 <span class="user-menu__count">0</span>
@@ -37,7 +37,7 @@
             <li class="user-menu__item">
               <a class="user-menu__link" href="#">
                 <span class="visually-hidden">Корзина</span>
-                <svg class="user-menu__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#cart-icon"></use>
                 </svg>
                 <span class="user-menu__count">0</span>
@@ -46,7 +46,7 @@
 
             <li class="user-menu__item">
               <a class="user-menu__link user-menu__link--custom" href="#">
-                <svg class="user-menu__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
                   <use href="icons/stack.svg#user-icon"></use>
                 </svg>
                 <span class="user-menu__text">Мой аккаунт</span>
@@ -200,7 +200,7 @@
               <ul class="header__switcher theme-switcher">
                 <li class="theme-switcher__item">
                   <button class="theme-switcher__control theme-switcher__control--active" type="button">
-                    <svg class="theme-switcher__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
                       <use href="icons/stack.svg#light-icon"></use>
                     </svg>
                     <span class="theme-switcher__text">Дневная тема</span>
@@ -209,7 +209,7 @@
 
                 <li class="theme-switcher__item">
                   <button class="theme-switcher__control" type="button">
-                    <svg class="theme-switcher__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
                       <use href="icons/stack.svg#dark-icon"></use>
                     </svg>
                     <span class="theme-switcher__text">Ночная тема</span>
@@ -221,7 +221,7 @@
 
           <a class="header__search search" href="#">
             <span class="visually-hidden">Поиск</span>
-            <svg class="search-button__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
               <use href="icons/stack.svg#loop-icon"></use>
             </svg>
           </a>
@@ -413,32 +413,32 @@
         <div class="container">
           <div class="tabs layout-switch">
             <header class="fonts__header">
-              <div class="fonts__options custom-select">
-                <button class="custom-select__trigger"type="button">Все новинки</button>
+              <div class="fonts__categories custom-select">
+                <button class="custom-select__trigger" type="button">Все новинки</button>
                 <ul class="custom-select__options tabs__list">
                   <li class="custom-select__item tabs__item">
-                    <button class="custom-select__option button-invert button-invert--active" data-value="all" data-option-id="0" type="button">
+                    <button class="custom-select__option tabs__button button-invert button-invert--active" data-value="all" data-id="0" type="button">
                       <span class="button-invert__dots button-invert__dots--top"></span>
                       <span>Все новинки</span>
                       <span class="button-invert__dots button-invert__dots--bottom"></span>
                     </button>
                   </li>
                   <li class="custom-select__item tabs__item">
-                    <button class="custom-select__option button-invert" data-value="sale" data-option-id="1" type="button">
+                    <button class="custom-select__option tabs__button button-invert" data-value="sale" data-id="1" type="button">
                       <span class="button-invert__dots button-invert__dots--top"></span>
                       <span>Распродажа</span>
                       <span class="button-invert__dots button-invert__dots--bottom"></span>
                     </button>
                   </li>
                   <li class="custom-select__item tabs__item">
-                    <button class="custom-select__option button-invert" data-value="recommend" data-option-id="2" type="button">
+                    <button class="custom-select__option tabs__button button-invert" data-value="recommend" data-id="2" type="button">
                       <span class="button-invert__dots button-invert__dots--top"></span>
                       <span>Рекомендуем</span>
                       <span class="button-invert__dots button-invert__dots--bottom"></span>
                     </button>
                   </li>
                   <li class="custom-select__item tabs__item">
-                    <button class="custom-select__option button-invert" data-value="bestsellers" data-option-id="3" type="button">
+                    <button class="custom-select__option tabs__button button-invert" data-value="bestsellers" data-id="3" type="button">
                       <span class="button-invert__dots button-invert__dots--top"></span>
                       <span>Бестселлеры</span>
                       <span class="button-invert__dots button-invert__dots--bottom"></span>
@@ -447,18 +447,20 @@
                 </ul>
               </div>
 
-              <div class="fonts__layout-switcher layout-switcher">
+              <div class="fonts__layout-switcher layout-switch__switcher layout-switcher">
                 <span class="visually-hidden">Переключить раскладку карточек</span>
                 <ul class="layout-switcher__list">
                   <li class="layout-switcher__item">
                     <button class="layout-switcher__button layout-switcher__button--active" type="button">
                       <span class="visually-hidden">Сетка</span>
+                      <span class="layout-switcher__icon layout-switcher__icon--grid"></span>
                     </button>
                   </li>
 
                   <li class="layout-switcher__item">
-                    <button class="layout-switcher__button layout-switcher__button--active" type="button">
+                    <button class="layout-switcher__button" type="button">
                       <span class="visually-hidden">Список</span>
+                      <span class="layout-switcher__icon layout-switcher__icon--list"></span>
                     </button>
                   </li>
                 </ul>
@@ -467,7 +469,356 @@
 
             <div class="tabs__content">
               <div class="tabs__tab" data-id="0">
+                <ul class="fonts__list layout-switch__list layout-switch__list--grid">
+                  <li class="fonts__item layout-switch__item layout-switch__item--wide">
+                    <article class="font-card font-card--wide">
+                      <article class="font-card__info font-info font-info--expanded">
+                        <button class="font-info__like like-button" type="button">
+                          <span class="visually-hidden">Избранное. Добавить/убрать.</span>
+                        </button>
+                        <a class="font-info__content" href="#">
+                          <header class="font-info__header">
+                            <p class="font-info__category">
+                              <span>Распродажа</span>
+                              <span class="font-info__accent-text">30%</span>
+                            </p>
 
+                            <h3 class="font-info__title">Pragmatica Next&#160;VF</h3>
+                          </header>
+
+                          <div class="font-info__main-content">
+                            <div class="font-info__content-wrapper">
+                              <div class="font-info__description">
+                                <p class="font-info__format">Opentype</p>
+
+                                <ul class="font-info__list">
+                                  <li class="font-info__item">
+                                    <span>Начертаний</span>
+                                    <b>8</b>
+                                  </li>
+
+                                  <li class="font-info__item">
+                                    <span>Языки</span>
+                                    <b>92</b>
+                                  </li>
+                                </ul>
+
+                                <p class="font-info__type">Гротеск</p>
+
+                                <p class="font-info__price">
+                                  <span class="font-info__from">От</span>
+                                  <span class="font-info__value">2&#160;250&#160;&#8381;</span>
+                                </p>
+                              </div>
+
+                              <footer class="font-info__footer">
+                                <h4 class="font-info__subtitle">Теги</h4>
+
+                                <ul class="font-info__tags">
+                                  <li class="font-info__tag">Десктоп</li>
+                                  <li class="font-info__tag">Веб</li>
+                                </ul>
+                              </footer>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+
+                      <div class="font-card__gallery">
+                        <a class="font-card__link" href="#">
+                          <div class="font-card__gallery-wrapper slider">
+                            <ul class="font-card__gallery-list slider__wrapper">
+                              <li class="font-card__gallery-item font-card__gallery-item--shown slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="370" height="300" type="image/webp" media="(max-width: 920px)" srcset="images/pragmatica-image-1-mobile@1x.webp 1x, images/pragmatica-image-1-mobile@2x.webp 2x">
+                                    <source width="1580" height="800" type="image/webp" srcset="images/pragmatica-image-1@1x.webp 1x, images/pragmatica-image-1@2x.webp 2x">
+                                    <source width="370" height="300" type="image/png" media="(max-width: 920px)" srcset="images/pragmatica-image-1-mobile@1x.png 1x, images/pragmatica-image-1-mobile@2x.png 2x">
+                                    <img src="images/pragmatica-image-1@1x.png" srcset="images/pragmatica-image-1@2x.png 2x" width="1580" height="800" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="1580" height="800" type="image/webp" srcset="images/pragmatica-image-2@1x.webp 1x, images/pragmatica-image-2@2x.webp 2x">
+                                    <img src="images/pragmatica-image-2@1x.png" srcset="images/pragmatica-image-2@2x.png 2x" width="1580" height="800" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="1580" height="800" type="image/webp" srcset="images/pragmatica-image-3@1x.webp 1x, images/pragmatica-image-3@2x.webp 2x">
+                                    <img src="images/pragmatica-image-3@1x.png" srcset="images/pragmatica-image-3@2x.png 2x" width="1580" height="800" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+                            </ul>
+
+                            <ul class="slider__pagination">
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 1</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 2</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 3</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </a>
+
+                        <button class="font-card__more button-more" type="button">
+                          <span class="visually-hidden">Открыть/закрыть описание</span>
+                        </button>
+                      </div>
+                    </article>
+                  </li>
+
+                  <li class="fonts__item layout-switch__item">
+                    <article class="font-card">
+                      <article class="font-card__info font-info">
+                        <button class="font-info__like like-button" type="button">
+                          <span class="visually-hidden">Избранное. Добавить/убрать.</span>
+                        </button>
+                        <a class="font-info__content" href="#">
+                          <header class="font-info__header">
+                            <p class="font-info__category">
+                              <span>Бестселлер</span>
+                            </p>
+
+                            <h3 class="font-info__title">Proxima nova</h3>
+                          </header>
+
+                          <div class="font-info__main-content">
+                            <div class="font-info__content-wrapper">
+                              <div class="font-info__description">
+                                <p class="font-info__format">Opentype</p>
+
+                                <ul class="font-info__list">
+                                  <li class="font-info__item">
+                                    <span>Начертаний</span>
+                                    <b>8</b>
+                                  </li>
+
+                                  <li class="font-info__item">
+                                    <span>Языки</span>
+                                    <b>92</b>
+                                  </li>
+                                </ul>
+
+                                <p class="font-info__type">Гротеск</p>
+
+                                <p class="font-info__price">
+                                  <span class="font-info__from">От</span>
+                                  <span class="font-info__value">2&#160;250&#160;&#8381;</span>
+                                </p>
+                              </div>
+
+                              <footer class="font-info__footer">
+                                <h4 class="font-info__subtitle">Теги</h4>
+
+                                <ul class="font-info__tags">
+                                  <li class="font-info__tag">Десктоп</li>
+                                  <li class="font-info__tag">Веб</li>
+                                </ul>
+                              </footer>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+
+                      <div class="font-card__gallery">
+                        <a class="font-card__link" href="#">
+                          <div class="font-card__gallery-wrapper slider">
+                            <ul class="font-card__gallery-list slider__wrapper">
+                              <li class="font-card__gallery-item font-card__gallery-item--shown slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="370" height="300" type="image/webp" media="(max-width: 920px)" srcset="images/proxima-image-1-mobile@1x.webp 1x, images/proxima-image-1-mobile@2x.webp 2x">
+                                    <source width="785" height="600" type="image/webp" srcset="images/proxima-image-1@1x.webp 1x, images/proxima-image-1@2x.webp 2x">
+                                    <source width="370" height="300" type="image/png" media="(max-width: 920px)" srcset="images/proxima-image-1-mobile@1x.png 1x, images/proxima-image-1-mobile@2x.png 2x">
+                                    <img src="images/proxima-image-1@1x.png" srcset="images/proxima-image-1@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="785" height="600" type="image/webp" srcset="images/pragmatica-image-2@1x.webp 1x, images/pragmatica-image-2@2x.webp 2x">
+                                    <img src="images/pragmatica-image-2@1x.png" srcset="images/pragmatica-image-2@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="785" height="600" type="image/webp" srcset="images/pragmatica-image-3@1x.webp 1x, images/pragmatica-image-3@2x.webp 2x">
+                                    <img src="images/pragmatica-image-3@1x.png" srcset="images/pragmatica-image-3@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+                            </ul>
+
+                            <ul class="slider__pagination">
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 1</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 2</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 3</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </a>
+
+                        <button class="font-card__more button-more" type="button">
+                          <span class="visually-hidden">Открыть/закрыть описание</span>
+                        </button>
+                      </div>
+                    </article>
+                  </li>
+
+                  <li class="fonts__item layout-switch__item ">
+                    <article class="font-card">
+                      <article class="font-card__info font-info">
+                        <button class="font-info__like like-button" type="button">
+                          <span class="visually-hidden">Избранное. Добавить/убрать.</span>
+                        </button>
+                        <a class="font-info__content" href="#">
+                          <header class="font-info__header">
+                            <p class="font-info__category">
+                              <span>Рекомендуем</span>
+                            </p>
+
+                            <h3 class="font-info__title">Magistral&#160;PT</h3>
+                          </header>
+
+                          <div class="font-info__main-content">
+                            <div class="font-info__content-wrapper">
+                              <div class="font-info__description">
+                                <p class="font-info__format">Opentype</p>
+
+                                <ul class="font-info__list">
+                                  <li class="font-info__item">
+                                    <span>Начертаний</span>
+                                    <b>8</b>
+                                  </li>
+
+                                  <li class="font-info__item">
+                                    <span>Языки</span>
+                                    <b>92</b>
+                                  </li>
+                                </ul>
+
+                                <p class="font-info__type">Гротеск</p>
+
+                                <p class="font-info__price">
+                                  <span class="font-info__from">От</span>
+                                  <span class="font-info__value">2&#160;250&#160;&#8381;</span>
+                                </p>
+                              </div>
+
+                              <footer class="font-info__footer">
+                                <h4 class="font-info__subtitle">Теги</h4>
+
+                                <ul class="font-info__tags">
+                                  <li class="font-info__tag">Десктоп</li>
+                                  <li class="font-info__tag">Веб</li>
+                                </ul>
+                              </footer>
+                            </div>
+                          </div>
+                        </a>
+                      </article>
+
+                      <div class="font-card__gallery">
+                        <a class="font-card__link" href="#">
+                          <div class="font-card__gallery-wrapper slider">
+                            <ul class="font-card__gallery-list slider__wrapper">
+                              <li class="font-card__gallery-item font-card__gallery-item--shown slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="370" height="300" type="image/webp" media="(max-width: 920px)" srcset="images/magistral-image-1-mobile@1x.webp 1x, images/magistral-image-1-mobile@2x.webp 2x">
+                                    <source width="785" height="785" type="image/webp" srcset="images/magistral-image-1@1x.webp 1x, images/magistral-image-1@2x.webp 2x">
+                                    <source width="370" height="300" type="image/png" media="(max-width: 920px)" srcset="images/magistral-image-1-mobile@1x.png 1x, images/magistral-image-1-mobile@2x.png 2x">
+                                    <img src="images/magistral-image-1@1x.png" srcset="images/magistral-image-1@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="785" height="600" type="image/webp" srcset="images/pragmatica-image-2@1x.webp 1x, images/pragmatica-image-2@2x.webp 2x">
+                                    <img src="images/pragmatica-image-2@1x.png" srcset="images/pragmatica-image-2@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+
+                              <li class="font-card__gallery-item slider__slide">
+                                <div class="font-card__image">
+                                  <picture>
+                                    <source width="785" height="600" type="image/webp" srcset="images/pragmatica-image-3@1x.webp 1x, images/pragmatica-image-3@2x.webp 2x">
+                                    <img src="images/pragmatica-image-3@1x.png" srcset="images/pragmatica-image-3@2x.png 2x" width="785" height="600" alt="Демонстрация шрифта.">
+                                  </picture>
+                                </div>
+                              </li>
+                            </ul>
+
+                            <ul class="slider__pagination">
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 1</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 2</span>
+                                </button>
+                              </li>
+
+                              <li class="slider__pagination-item">
+                                <button class="slider__pagination-button" type="button">
+                                  <span class="visually-hidden">Слайд 3</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </a>
+
+                        <button class="font-card__more button-more" type="button">
+                          <span class="visually-hidden">Открыть/закрыть описание</span>
+                        </button>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
