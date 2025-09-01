@@ -38,6 +38,10 @@
       opacity: 0.7;
     }
 
+    &:user-invalid {
+      border-color: $color-accent-main;
+    }
+
     &:disabled,
     &--disabled {
       color: $color-nobel;
