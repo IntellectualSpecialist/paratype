@@ -1,6 +1,5 @@
 .button-invert {
   position: relative;
-  z-index: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +57,7 @@
   }
 
   &--small {
+    padding: 10px 17px;
     font-size: 12px;
     line-height: 14px;
   }

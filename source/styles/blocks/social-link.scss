@@ -1,0 +1,31 @@
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: $color-black;
+  transition: opacity 0.2s linear;
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      opacity: 0.7;
+    }
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--tg {
+    svg,
+    img {
+      margin-left: -4px;
+    }
+  }
+}

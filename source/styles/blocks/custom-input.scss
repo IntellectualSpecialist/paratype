@@ -1,0 +1,61 @@
+.custom-input {
+  display: block;
+  width: 100%;
+
+  input {
+    width: 100%;
+    min-height: 58px;
+    padding: 21px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: inherit;
+    background-color: $color-white-smoke;
+    border-radius: 10px;
+    border: 1px solid $color-white-smoke;
+    transition:
+      border-color $trans-default,
+      opacity $trans-default,
+      backgroud-color $trans-default,
+      color $trans-default;
+
+    &::placeholder {
+      color: $color-nobel;
+    }
+
+    @media (hover: hover) {
+      &:hover:not(:active) {
+        border-color: $color-nobel;
+      }
+    }
+
+    &:focus-visible {
+      border-color: $color-nobel;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &:disabled,
+    &--disabled {
+      color: $color-nobel;
+      background-color: rgba($color-white-smoke-2, 0.6);
+      border-color: rgba($color-white-smoke-2, 0.6);
+      pointer-events: none;
+
+      @media (hover: hover) {
+        &:hover:not(:active) {
+          color: $color-nobel;
+          background-color: rgba($color-white-smoke-2, 0.6);
+          border-color: rgba($color-white-smoke-2, 0.6);
+        }
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}

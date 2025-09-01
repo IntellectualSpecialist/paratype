@@ -1,14 +1,14 @@
-.layout-switch__list {
+.view-switch__list {
   @include list-reset;
 
-  &--grid {
+  &--cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 }
 
-.layout-switch__item {
+.view-switch__item {
   &--wide {
     grid-column: span 2;
   }
