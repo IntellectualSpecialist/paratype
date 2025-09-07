@@ -24,7 +24,7 @@
       color: $color-nobel;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover:not(:active) {
         border-color: $color-nobel;
       }
@@ -38,10 +38,6 @@
       opacity: 0.7;
     }
 
-    &:user-invalid {
-      border-color: $color-accent-main;
-    }
-
     &:disabled,
     &--disabled {
       color: $color-nobel;
@@ -49,7 +45,7 @@
       border-color: rgba($color-white-smoke-2, 0.6);
       pointer-events: none;
 
-      @media (hover: hover) {
+      @media (hover: hover) and (pointer: fine) {
         &:hover:not(:active) {
           color: $color-nobel;
           background-color: rgba($color-white-smoke-2, 0.6);
@@ -60,6 +56,17 @@
       &:active {
         opacity: 1;
       }
+    }
+
+    &--invalid {
+      border-color: $color-accent-main;
+    }
+  }
+
+  @include vp-920 {
+    input {
+      min-height: 50px;
+      padding: 16px 20px;
     }
   }
 }

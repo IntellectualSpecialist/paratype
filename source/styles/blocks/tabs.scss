@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   align-items: flex-start;
   border: 1px solid $color-white-smoke;
+
+  @include vp-920 {
+    display: block;
+    border: none;
+  }
 }
 
 .tabs__item {
@@ -11,6 +16,10 @@
 
   &:last-child {
     border-right: 0;
+  }
+
+  @include vp-920 {
+    border-right: none;
   }
 }
 

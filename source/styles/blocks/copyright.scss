@@ -3,6 +3,11 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
+
+  @include vp-920 {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
 }
 
 .copyright__wrapper {
@@ -12,11 +17,29 @@
   max-width: 50%;
   margin-top: 30px;
   color: $color-nobel;
+
+  @include vp-920 {
+    display: block;
+    max-width: none;
+    margin-top: 0;
+  }
 }
 
 .copyright__text {
   margin: 0;
   margin-right: 53px;
+
+  br {
+    display: none;
+  }
+
+  @include vp-920 {
+    margin-bottom: 20px;
+
+    br {
+      display: inline;
+    }
+  }
 }
 
 .copyright__design-link {
@@ -24,7 +47,9 @@
   display: block;
   color: inherit;
   text-decoration: none;
-  transition: opacity 0.2s linear;
+  transition:
+    opacity $trans-default,
+    color $trans-default;
 
   &::before {
     content: "";
@@ -36,7 +61,7 @@
     transform: translate(-50%, -50%);
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
       color: $color-accent-main;
     }
@@ -54,4 +79,9 @@
 
 .copyright__social {
   max-width: 50%;
+
+  @include vp-920 {
+    max-width: none;
+    margin-bottom: 20px;
+  }
 }

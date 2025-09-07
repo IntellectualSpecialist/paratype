@@ -1,23 +1,48 @@
 .fonts {
   padding-top: 30px;
+
+  @include vp-920 {
+    padding-top: 20px;
+  }
 }
 
 .fonts__header {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
+
+  @include vp-920 {
+    border: 1px solid $color-whisper;
+    border-radius: 10px;
+  }
 }
 
 .fonts__categories {
   margin-right: auto;
   max-width: 1365px;
+
+  @include vp-920 {
+    flex-grow: 1;
+    height: 100%;
+  }
 }
 
 .fonts__view-switcher {
   margin-top: 38px;
+
+  @include vp-920 {
+    padding: 14px 19px;
+    margin-top: 0;
+    border-left: 1px solid $color-whisper;
+  }
 }
 
 .fonts__list {
   width: calc(100% + 40px);
   margin-left: -20px;
+
+  @include vp-920 {
+    width: auto;
+    margin-left: 0;
+  }
 }

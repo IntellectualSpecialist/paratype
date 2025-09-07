@@ -1,15 +1,6 @@
 .font-info {
   position: relative;
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      .font-info__main-content {
-        max-height: 3000px;
-        transition: max-height 0.5s ease-in;
-      }
-    }
-  }
-
   &--expanded {
     .font-info__main-content {
       max-height: 3000px;
@@ -24,6 +15,11 @@
   right: 20px;
   width: clamp(14px, 1.5vw, 24px);
   height: clamp(14px, 1.5vw, 24px);
+
+  @include vp-920 {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .font-info__content {
@@ -38,10 +34,39 @@
   text-decoration: none;
   background-color: $color-white;
   border-radius: clamp(5px, 0.63vw, 10px);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .font-info__main-content {
+        max-height: 3000px;
+        transition: max-height 0.5s ease-in;
+      }
+    }
+  }
+
+  &:focus-visible {
+    .font-info__main-content {
+      max-height: 3000px;
+      transition: max-height 0.5s ease-in;
+    }
+  }
+
+  @include vp-920 {
+    padding: 20px;
+    padding-bottom: 36px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 10px;
+    border: 1px solid $color-whisper;
+  }
 }
 
 .font-info__header {
   padding-right: clamp(12px, 1.88vw, 30px);
+
+  @include vp-920 {
+    padding-right: 30px;
+  }
 }
 
 .font-info__main-content {
@@ -52,6 +77,11 @@
 
 .font-info__content-wrapper {
   padding-top: clamp(20px, 2.63vw, 42px);
+
+  @include vp-920 {
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
 }
 
 .font-info__category {
@@ -62,6 +92,12 @@
   margin: 0;
   margin-bottom: clamp(5px, 0.63vw, 10px);
   text-transform: uppercase;
+
+  @include vp-920 {
+    min-height: 20px;
+    gap: 13px;
+    margin-bottom: 10px;
+  }
 }
 
 .font-info__accent-text {
@@ -75,18 +111,39 @@
   font-size: clamp(14px, 1.5vw, 24px);
   line-height: clamp(16px, 1.75vw, 28px);
   text-transform: uppercase;
+
+  br {
+    display: none;
+  }
+
+  @include vp-920 {
+    font-size: 24px;
+    line-height: 28px;
+
+    br {
+      display: inline;
+    }
+  }
 }
 
 .font-info__format {
   margin: 0;
   margin-bottom: clamp(4px, 0.5vw, 8px);
   text-align: right;
+
+  @include vp-920 {
+    margin-bottom: 8px;
+  }
 }
 
 .font-info__list {
   @include list-reset;
   margin-bottom: clamp(4px, 0.5vw, 8px);
   border-top: 1px solid $color-black;
+
+  @include vp-920 {
+    margin-bottom: 8px;
+  }
 }
 
 .font-info__item {
@@ -99,11 +156,19 @@
   b {
     font-weight: 600;
   }
+
+  @include vp-920 {
+    padding: 8px 0 7px;
+  }
 }
 
 .font-info__type {
   margin: 0;
   margin-bottom: clamp(4px, 0.56vw, 9px);
+
+  @include vp-920 {
+    margin-bottom: 9px;
+  }
 }
 
 .font-info__price {
@@ -114,6 +179,11 @@
   margin: 0;
   margin-bottom: clamp(8px, 0.88vw, 14px);
   text-align: right;
+
+  @include vp-920 {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
 }
 
 .font-info__from {
@@ -122,16 +192,29 @@
   letter-spacing: 0.01em;
   color: $color-nobel;
   font-weight: 500;
+
+  @include vp-920 {
+    margin-top: 3px;
+  }
 }
 
 .font-info__value {
   font-size: clamp(12px, 1.5vw, 24px);
   line-height: clamp(14px, 1.75vw, 28px);
+
+  @include vp-920 {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .font-info__subtitle {
   margin: 0;
   margin-bottom: clamp(4px, 0.5vw, 8px);
+
+  @include vp-920 {
+    margin-bottom: 7px;
+  }
 }
 
 .font-info__tags {
@@ -140,6 +223,10 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: clamp(3px, 0.31vw, 5px);
+
+  @include vp-920 {
+    gap: 5px;
+  }
 }
 
 .font-info__tag {
@@ -147,4 +234,9 @@
   color: $color-white;
   background-color: $color-accent-main;
   border-radius: clamp(60px, 5.63vw, 90px);
+
+  @include vp-920 {
+    padding: 6px 11px;
+    border-radius: 90px;
+  }
 }

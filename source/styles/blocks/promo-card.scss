@@ -3,14 +3,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   padding: 10px;
   padding-bottom: 80px;
-  aspect-ratio: 760/440;
+  min-height: 440px;
   text-decoration: none;
   color: inherit;
   border-radius: 10px;
   overflow: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
   scrollbar-width: none;
   transition: opacity $trans-default;
 
@@ -21,7 +22,7 @@
     background: transparent;
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
       opacity: 0.8;
     }
@@ -35,6 +36,7 @@
     opacity: 0.6;
   }
 
+
   &--primary {
     color: $color-white-smoke;
     background-color: $color-black;
@@ -46,13 +48,7 @@
         url("../../images/promo-1@1x.png") 1x
       );
 
-    .promo-card__lead {
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 40px;
-    }
-
-    @mixin vp-920 {
+    @include vp-920 {
       background-image:
         image-set(
           url("../../images/promo-1-mobile@2x.webp") type("image/webp") 2x,
@@ -76,10 +72,15 @@
     .promo-card__lead {
       width: min-content;
       font-weight: 750;
-      font-size: 120px;
-      line-height: 90px;
+      font-size: clamp(60px, 10vw, 120px);
+      line-height: 0.75;
       font-stretch: 10%;
     }
+  }
+
+  @include vp-920 {
+    min-height: 300px;
+    padding: 20px;
   }
 }
 
@@ -100,6 +101,10 @@
   align-items: flex-start;
   min-height: 40px;
   padding-left: 11px;
+
+  @include vp-920 {
+    padding-left: 0;
+  }
 }
 
 .promo-card__title {
@@ -107,12 +112,22 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include vp-920 {
+    position: static;
+    transform: none;
+  }
 }
 
 .promo-card__count {
   margin: 0;
   margin-top: 10px;
   letter-spacing: 0.01em;
+
+  @include vp-920 {
+    margin-top: 0;
+    margin-right: 18px;
+  }
 }
 
 .promo-card__count-new {
@@ -126,7 +141,18 @@
   width: fit-content;
   margin: 0 auto;
   padding-top: 17px;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 40px;
   color: $color-accent-main;
   text-transform: uppercase;
   text-align: center;
+
+  @include vp-920 {
+    align-items: flex-start;
+    margin-top: 69px;
+    padding: 0;
+    font-size: 50px;
+    line-height: 40px;
+  }
 }

@@ -4,17 +4,40 @@
     align-items: flex-start;
     gap: 20px;
   }
+
+  @include vp-920 {
+    form {
+      display: block;
+    }
+  }
 }
 
 .form__title {
   margin-bottom: 15px;
   color: $color-nobel;
+
+  @include vp-920 {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .form__input {
   flex-grow: 1;
+
+  @include vp-920 {
+    margin-bottom: 10px;
+  }
 }
 
 .form__button {
   max-width: 50%;
+
+  @include vp-920 {
+    display: flex;
+    max-width: none;
+    width: fit-content;
+    margin: 0 auto;
+  }
 }

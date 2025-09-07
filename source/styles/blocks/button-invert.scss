@@ -6,60 +6,141 @@
   column-gap: 21px;
   width: fit-content;
   padding: 22px 25px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
   color: $color-black;
+  text-align: left;
   background-color: transparent;
   border: none;
   border-radius: 80px;
   text-decoration: none;
   transition:
-    color $trans-default,
-    background-color $trans-default,
+    color 0.1s ease,
+    background-color 0.1s ease,
     opacity $trans-default;
   cursor: pointer;
   user-select: none;
 
-  @media (hover: hover) {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $color-accent-main;
+    border-radius: 80px;
+    opacity: 0;
+    transform: scale(0.85);
+    transition:
+      transform 0.1s ease,
+      opacity 0.1s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
-      color: $color-accent-main;
+      color: $color-white;
+
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .button-invert__dots {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 
   &:focus-visible {
-    color: $color-accent-main;
+    color: $color-white;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .button-invert__dots {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &:active {
-    color: $color-accent-main;
+    color: $color-white;
     opacity: 0.7;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .button-invert__dots {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &--active {
     color: $color-white;
-    background-color: $color-accent-main;
     pointer-events: none;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
 
     .button-invert__dots {
       opacity: 1;
+      transform: scale(1);
+    }
+
+    &:focus-visible {
+      color: $color-white;
     }
   }
 
   &--secondary {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 10px 17px;
     min-width: fit-content;
     font-size: 12px;
     line-height: 14px;
-    color: $color-nobel;
+    color: $color-black;
+    transition:
+      color $trans-default,
+      opacity $trans-default;
+
+    &::before {
+      display: none;
+    }
+
+    .button-invert__dots {
+      display: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:active) {
+        color: $color-accent-main;
+      }
+    }
+
+    &:focus-visible {
+      color: $color-accent-main;
+    }
+
+    &:active {
+      color: $color-accent-main;
+    }
+
+    @include vp-920 {
+      padding: 10px;
+    }
   }
 
-  &--small {
-    padding: 10px 17px;
-    font-size: 12px;
-    line-height: 14px;
+  &--alternative {
+    padding: 10px 0;
+    color: $color-nobel;
   }
 
   &--disabled,
@@ -67,13 +148,37 @@
     color: $color-nobel;
     pointer-events: none;
   }
+
+  @include vp-920 {
+    column-gap: 11px;
+
+    &::before {
+      display: none;
+    }
+
+    &:focus-visible,
+    &:active {
+      color: $color-black;
+    }
+
+    &--active {
+      color: $color-accent-main;
+    }
+
+    &--alternative {
+      color: $color-black;
+    }
+  }
 }
 
 .button-invert__dots {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity $trans-default;
+  transition:
+    opacity 0.1s ease,
+    transform 0.1s ease;
+  transform: scale(0.85);
 
   &::before,
   &::after {
@@ -98,6 +203,14 @@
       bottom: 0;
     }
   }
+
+  @include vp-920 {
+    display: none;
+  }
+}
+
+.button-invert__text {
+  position: relative;
 }
 
 .button-invert__accent {

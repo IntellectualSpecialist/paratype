@@ -7,4 +7,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+
+  @include vp-920 {
+    display: flex;
+    gap: 0;
+  }
 }

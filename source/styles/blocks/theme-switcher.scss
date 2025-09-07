@@ -1,9 +1,12 @@
 .theme-switcher {
   @include list-reset;
   display: flex;
-  align-items: flex-start;
   background-color: $color-white-smoke;
   border-radius: 30px;
+}
+
+.theme-switcher__item {
+  width: 50%;
 }
 
 .theme-switcher__control {
@@ -11,17 +14,23 @@
   justify-content: center;
   align-items: center;
   width: 40px;
-  height: 40px;
+  height: 100%;
+  min-height: 40px;
   padding: 0;
   border: 0;
   background-color: transparent;
   border-radius: 50%;
   transition:
     background-color $trans-default,
-    opacity $trans-default;
+    color $trans-default,
+    opacity $trans-default,
+    gap $trans-default,
+    padding $trans-default;
+  will-change: opacity, color, background-color;
+  transform: translateZ(0);
   cursor: pointer;
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
       opacity: 0.7;
     }
@@ -35,8 +44,46 @@
     opacity: 0.4;
   }
 
+  svg {
+    flex-shrink: 0;
+    transform: translateZ(0);
+  }
+
+  &--day {
+    color: $color-nobel;
+  }
+
+  &--night {
+    color: $color-black;
+  }
+
   &--active {
+    color: $color-white;
     background-color: $color-accent-main;
+    pointer-events: none;
+    cursor: default;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:active) {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include vp-920 {
+    width: 100%;
+    gap: 12px;
+    padding: 10px 21px 10px 10px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    border-radius: 30px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -44,4 +91,13 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
+
+  @include vp-920 {
+    position: static;
+    max-width: 99px;
+    width: 75%;
+    opacity: 1;
+    text-align: left;
+    pointer-events: all;
+  }
 }

@@ -1,0 +1,24 @@
+.scroll-wrapper {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  max-width: 1580px;
+  width: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  @include vp-920 {
+    display: none;
+  }
+}
+
+.scroll-wrapper__button {
+  position: fixed;
+  z-index: 4;
+
+  @include vp-920 {
+    display: none;
+  }
+}

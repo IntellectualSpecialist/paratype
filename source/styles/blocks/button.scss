@@ -6,6 +6,7 @@
   column-gap: 10px;
   width: fit-content;
   padding: 22px 33px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
@@ -44,7 +45,7 @@
     position: relative;
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
       &::before {
         opacity: 0.1;
@@ -79,7 +80,7 @@
       display: none;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover:not(:active) {
         color: $color-accent-main;
         border-color: $color-accent-main;
@@ -104,5 +105,9 @@
       border-color: $color-whisper;
       pointer-events: none;
     }
+  }
+
+  @include vp-920 {
+    padding: 17px 25px;
   }
 }

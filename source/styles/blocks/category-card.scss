@@ -12,7 +12,7 @@
   border-radius: 10px;
   transition: opacity $trans-default;
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {
       opacity: 0.8;
     }
@@ -25,6 +25,11 @@
   &:active {
     opacity: 0.6;
   }
+
+  @include vp-920 {
+    min-height: 120px;
+    padding-bottom: 16px;
+  }
 }
 
 .category-card__header {
@@ -36,16 +41,41 @@
   gap: 10px;
   min-height: 40px;
   padding-left: 11px;
+
+  @include vp-920 {
+    min-height: 20px;
+  }
 }
 
 .category-card__title {
   order: 3;
   margin-top: 10px;
   text-align: center;
+
+  @include vp-920 {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .category-card__count {
   margin-top: 10px;
+
+  @include vp-920 {
+    display: none;
+  }
+}
+
+.category-card__count-new {
+  @include vp-920 {
+    min-width: 20px;
+    min-height: 20px;
+    padding: 2px;
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: auto;
+  }
 }
 
 .category-card__image {
@@ -56,4 +86,13 @@
   margin-top: -11px;
   min-height: 96px;
   margin-bottom: auto;
+
+  @include vp-920 {
+    min-height: 57px;
+
+    img {
+      width: calc(100% * 0.69);
+      height: calc(100% * 0.69);
+    }
+  }
 }

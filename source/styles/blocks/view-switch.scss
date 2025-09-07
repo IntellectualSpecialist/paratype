@@ -6,10 +6,24 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+
+  @include vp-920 {
+    &--cards {
+      display: block;
+    }
+  }
 }
 
 .view-switch__item {
   &--wide {
     grid-column: span 2;
+  }
+
+  @include vp-920 {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

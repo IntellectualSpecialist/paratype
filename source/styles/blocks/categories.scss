@@ -4,6 +4,18 @@
   &--custom {
     padding-top: 30px;
   }
+
+  @include vp-920 {
+    padding-top: 20px;
+  }
+}
+
+.categories__list-wrapper {
+  @include vp-920 {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    overflow: hidden;
+  }
 }
 
 .categories__list {
@@ -11,8 +23,27 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @include vp-920 {
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 0 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+  }
 }
 
 .categories__item {
   flex-basis: 175px;
+
+  @include vp-920 {
+    flex: 0 0 105px;
+  }
 }
