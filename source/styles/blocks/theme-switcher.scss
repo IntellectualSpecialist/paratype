@@ -29,6 +29,7 @@
   will-change: opacity, color, background-color;
   transform: translateZ(0);
   cursor: pointer;
+  user-select: none;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover:not(:active) {

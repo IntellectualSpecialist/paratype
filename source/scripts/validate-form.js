@@ -7,10 +7,13 @@ const formElements = document.querySelectorAll('.form');
 
 const initFormValidate = (form) => {
   const formElement = form.querySelector('form');
+  let emailInputWrapperElement;
   let emailInputElement;
 
   if (formElement) {
-    emailInputElement = formElement.querySelector('[name="email"]');
+    emailInputElement = form.querySelector('[name="email"]');
+
+    emailInputWrapperElement = emailInputElement.closest('.custom-input');
   }
 
   const isValidEmail = (email) => {
@@ -19,8 +22,8 @@ const initFormValidate = (form) => {
   };
 
   const cleanFields = () => {
-    if (emailInputElement.classList.contains('custom-input--invalid')) {
-      emailInputElement.classList.remove('custom-input--invalid');
+    if (emailInputWrapperElement.classList.contains('custom-input--invalid')) {
+      emailInputWrapperElement.classList.remove('custom-input--invalid');
     }
 
     formElement.reset();
@@ -36,7 +39,7 @@ const initFormValidate = (form) => {
 
     if (!email) {
       emailInputElement.setCustomValidity(AlertMessages.EMPTY);
-      emailInputElement.classList.add('custom-input--invalid');
+      emailInputWrapperElement.classList.add('custom-input--invalid');
       emailInputElement.reportValidity();
 
       return;
@@ -44,7 +47,7 @@ const initFormValidate = (form) => {
 
     if (!isValidEmail(email)) {
       emailInputElement.setCustomValidity(AlertMessages.EMAIL);
-      emailInputElement.classList.add('custom-input--invalid');
+      emailInputWrapperElement.classList.add('custom-input--invalid');
       emailInputElement.reportValidity();
 
       return;

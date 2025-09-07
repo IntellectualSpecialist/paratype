@@ -8,10 +8,12 @@ import {initCardGalleries} from './font-card-gallery';
 import {initViewSwitchers} from './view-switcher';
 import {initSelects} from './custom-select';
 import {initAllFontCards} from './font-cards';
-import { initFormsValidate } from './validate-form';
+import {initFormsValidate} from './validate-form';
+import {initChangeActiveLink} from './change-active-link';
 
 window.addEventListener('DOMContentLoaded', () => {
   initUserMenuMove();
+  initChangeActiveLink();
   initNavBurger();
   initThemeSwitcher();
   initScrollButton();

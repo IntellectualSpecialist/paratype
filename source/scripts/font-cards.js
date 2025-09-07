@@ -1,19 +1,21 @@
 import { breakpointTablet } from './const.js';
+const FIRST_ELEMENT_INDEX = 0;
+const SECOND_ELEMENT_INDEX = 2;
 const fontCardsElements = document.querySelectorAll('.fonts__list');
 
 const initFontCards = (fontCards) => {
   const cardsElements = Array.from(fontCards.querySelectorAll('.font-card'));
 
   const changeOpenCard = () => {
-    cardsElements[0].querySelector('.font-info').classList.remove('font-info--expanded');
+    cardsElements[FIRST_ELEMENT_INDEX].querySelector('.font-info').classList.remove('font-info--expanded');
 
-    cardsElements[2].querySelector('.font-info').classList.add('font-info--expanded');
+    cardsElements[SECOND_ELEMENT_INDEX].querySelector('.font-info').classList.add('font-info--expanded');
   };
 
   const changeOpenCardBack = () => {
-    cardsElements[0].querySelector('.font-info').classList.add('font-info--expanded');
+    cardsElements[FIRST_ELEMENT_INDEX].querySelector('.font-info').classList.add('font-info--expanded');
 
-    cardsElements[2].querySelector('.font-info').classList.remove('font-info--expanded');
+    cardsElements[SECOND_ELEMENT_INDEX].querySelector('.font-info').classList.remove('font-info--expanded');
   };
 
   const onCardClick = (evt) => {

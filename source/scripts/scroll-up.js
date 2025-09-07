@@ -1,9 +1,9 @@
 import { breakpointTablet } from './const.js';
-
+const SCROLL_TARGET_VALUE = 200;
 const scrollButtonElement = document.querySelector('.button-scroll');
 
 const onPageScroll = () => {
-  if (window.pageYOffset > 200) {
+  if (window.pageYOffset > SCROLL_TARGET_VALUE) {
     scrollButtonElement.classList.add('button-scroll--shown');
   } else {
     scrollButtonElement.classList.remove('button-scroll--shown');
