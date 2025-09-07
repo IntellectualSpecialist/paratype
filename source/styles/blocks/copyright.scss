@@ -28,6 +28,7 @@
 .copyright__text {
   margin: 0;
   margin-right: 53px;
+  letter-spacing: 0.01em;
 
   br {
     display: none;
@@ -47,6 +48,7 @@
   display: block;
   color: inherit;
   text-decoration: none;
+  letter-spacing: 0.01em;
   transition:
     opacity $trans-default,
     color $trans-default;
@@ -82,6 +84,6 @@
 
   @include vp-920 {
     max-width: none;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
