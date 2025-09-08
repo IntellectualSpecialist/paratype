@@ -1,6 +1,7 @@
 .theme-switcher {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   background-color: $color-white-smoke;
   border-radius: 30px;
 }

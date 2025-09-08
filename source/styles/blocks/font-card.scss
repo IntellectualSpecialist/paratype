@@ -182,6 +182,7 @@
   @include vp-920 {
     position: static;
     opacity: 1;
+    background-color: $color-black;
 
     img {
       aspect-ratio: 370/300;

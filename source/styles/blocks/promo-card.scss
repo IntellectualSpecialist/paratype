@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   padding: 10px;
   padding-bottom: 80px;
   min-height: 440px;
@@ -42,8 +43,8 @@
     background-color: $color-black;
     background-image:
       image-set(
-        url("../../images/promo-1@2x.webp") type("image/webp") 2x,
-        url("../../images/promo-1@1x.webp") type("image/webp") 1x,
+        url("../../images/promo-1@2x.webp") 2x,
+        url("../../images/promo-1@1x.webp") 1x,
         url("../../images/promo-1@2x.png") 2x,
         url("../../images/promo-1@1x.png") 1x
       );
@@ -51,8 +52,8 @@
     @include vp-920 {
       background-image:
         image-set(
-          url("../../images/promo-1-mobile@2x.webp") type("image/webp") 2x,
-          url("../../images/promo-1-mobile@1x.webp") type("image/webp") 1x,
+          url("../../images/promo-1-mobile@2x.webp") 2x,
+          url("../../images/promo-1-mobile@1x.webp") 1x,
           url("../../images/promo-1-mobile@2x.png") 2x,
           url("../../images/promo-1-mobile@1x.png") 1x
         );
@@ -63,8 +64,8 @@
     background-color: $color-melon;
     background-image:
       image-set(
-        url("../../images/promo-2@2x.webp") type("image/webp") 2x,
-        url("../../images/promo-2@1x.webp") type("image/webp") 1x,
+        url("../../images/promo-2@2x.webp") 2x,
+        url("../../images/promo-2@1x.webp") 1x,
         url("../../images/promo-2@2x.png") 2x,
         url("../../images/promo-2@1x.png") 1x
       );

@@ -24,10 +24,12 @@
   @include vp-920 {
     flex-grow: 1;
     height: 100%;
+    max-width: 72.5%;
   }
 }
 
 .fonts__view-switcher {
+  flex-shrink: 0;
   margin-top: 38px;
 
   @include vp-920 {

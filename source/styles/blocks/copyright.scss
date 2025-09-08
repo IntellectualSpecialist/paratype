@@ -27,7 +27,7 @@
 
 .copyright__text {
   margin: 0;
-  margin-right: 53px;
+  margin-right: 47px;
   letter-spacing: 0.01em;
 
   br {
@@ -35,6 +35,7 @@
   }
 
   @include vp-920 {
+    margin-right: 0;
     margin-bottom: 20px;
 
     br {
