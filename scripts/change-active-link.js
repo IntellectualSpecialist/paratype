@@ -1,0 +1,1 @@
+var t=window.matchMedia("(max-width:920px)");var i=2,o=Array.from(document.querySelectorAll(".site-list__link")),e=o[i],n=()=>{t.matches?e.classList.add("button-invert--active"):e.classList.remove("button-invert--active")},c=()=>{t.addEventListener("change",n),n()};export{c as initChangeActiveLink};

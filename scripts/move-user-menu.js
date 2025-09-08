@@ -1,0 +1,1 @@
+var e=window.matchMedia("(max-width:920px)");var n=document.querySelector(".header__wrapper-top"),t=document.querySelector(".user-menu"),r=document.querySelector(".header__wrapper-bottom"),o=()=>{e.matches?r.append(t):n.append(t)},p=()=>{e.addEventListener("change",o),o()};export{p as initUserMenuMove};
