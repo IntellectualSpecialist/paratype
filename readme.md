@@ -1,7 +1,15 @@
 node.js 18+ (разработка велась на версии 22)
 
-Шрифт: paratype.ru/
+Установка зависимостей: npm ci
 
-Дизайн, макет: wemakefab.ru/
+Начать работу: npm start
 
-Организатор: htmlacademy.ru/
+Build: npm run build
+
+([Чемпионат по верстке](https://htmlacademy.ru/contest))
+
+Шрифт: ([paratype.ru/](paratype.ru/))
+
+Дизайн, макет: ([wemakefab.ru/](wemakefab.ru/))
+
+Организатор: ([htmlacademy.ru/](htmlacademy.ru/))
