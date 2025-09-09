@@ -8,8 +8,8 @@ Build: npm run build
 
 [Чемпионат по верстке](https://htmlacademy.ru/contest)
 
-Шрифт: [paratype.ru/](paratype.ru/)
+Шрифт: [paratype.ru/](https://paratype.ru/)
 
-Дизайн, макет: [wemakefab.ru/](wemakefab.ru/)
+Дизайн, макет: [wemakefab.ru/](https://wemakefab.ru/)
 
-Организатор: [htmlacademy.ru/](htmlacademy.ru/)
+Организатор: [htmlacademy.ru/](https://htmlacademy.ru/)
