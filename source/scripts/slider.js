@@ -140,11 +140,11 @@ const initSlider = (sliderElement) => {
     sliderElement.removeEventListener('mousedown', startDrag);
     sliderElement.removeEventListener('mousemove', drag);
     sliderElement.removeEventListener('mouseup', endDrag);
-    sliderElement.removeEventListener('mouseleave', endDrag);
+    sliderElement.removeEventListener('mouseleave', onSliderMouseleave);
 
-    sliderElement.removeEventListener('touchstart', startDrag, { passive: false });
-    sliderElement.removeEventListener('touchmove', drag, { passive: false });
-    sliderElement.removeEventListener('touchend', endDrag);
+    sliderElement.removeEventListener('touchstart', onSliderTouchstart, { passive: false });
+    sliderElement.removeEventListener('touchmove', onSliderTouchmove, { passive: false });
+    sliderElement.removeEventListener('touchend', onSliderTouchend);
   };
 
 

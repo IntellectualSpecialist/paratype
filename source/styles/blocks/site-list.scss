@@ -21,6 +21,12 @@
     border-right: none;
   }
 
+  @media (max-width: 1250px) {
+    &--secondary {
+      margin-left: 2.64vw;
+    }
+  }
+
   @include vp-920 {
     border-right: none;
     border-bottom: 1px solid $color-black;
@@ -46,6 +52,20 @@
 
   &--secondary {
     min-width: auto;
+  }
+
+  @media (max-width: 1250px) {
+    min-width: 9.8vw;
+    padding: 1.76vw 2vw;
+    font-size: 1.12vw;
+    line-height: 1.28vw;
+
+    &--secondary {
+      min-width: auto;
+      padding: 10px 0;
+      font-size: 0.96vw;
+      line-height: 1.12vw;
+    }
   }
 
   @include vp-920 {

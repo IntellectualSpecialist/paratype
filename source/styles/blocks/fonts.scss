@@ -24,7 +24,7 @@
   @include vp-920 {
     flex-grow: 1;
     height: 100%;
-    max-width: 72.5%;
+    max-width: calc(100% - 100px);
   }
 }
 
@@ -33,6 +33,7 @@
   margin-top: 38px;
 
   @include vp-920 {
+    max-width: 100px;
     padding: 14px 19px;
     margin-top: 0;
     border-left: 1px solid $color-whisper;

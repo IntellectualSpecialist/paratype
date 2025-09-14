@@ -131,10 +131,6 @@
     &:active {
       color: $color-accent-main;
     }
-
-    @include vp-920 {
-      padding: 10px;
-    }
   }
 
   &--alternative {
@@ -158,6 +154,16 @@
     &:focus-visible,
     &:active {
       color: $color-black;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:active) {
+        color: $color-accent-main;
+      }
+    }
+
+    &--secondary {
+      padding: 10px;
     }
 
     &--active {

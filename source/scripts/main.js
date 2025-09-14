@@ -10,12 +10,14 @@ import {initSelects} from './custom-select';
 import {initAllFontCards} from './font-cards';
 import {initFormsValidate} from './validate-form';
 import {initChangeActiveLink} from './change-active-link';
+import {initAnimations} from './animation';
 
 window.addEventListener('DOMContentLoaded', () => {
   initUserMenuMove();
   initChangeActiveLink();
   initNavBurger();
   initThemeSwitcher();
+  initAnimations();
   initScrollButton();
   initSliders();
   initAllTabs();
