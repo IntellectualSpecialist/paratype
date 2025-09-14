@@ -1,0 +1,1 @@
+var i=document.querySelectorAll(".animation"),o=()=>{i.length&&i.forEach(t=>{let n=t.getBoundingClientRect().bottom-t.offsetHeight/2,e=window.innerHeight;n<e&&n>0&&t.classList.add("animation--visible")})},s=()=>{window.addEventListener("scroll",o),o()};export{s as initAnimations};
