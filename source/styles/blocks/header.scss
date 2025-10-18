@@ -68,6 +68,11 @@
     margin-left: -10px;
     margin-right: auto;
   }
+
+  @media (max-width: 386px) {
+    min-width: 77px;
+    min-height: 47px;
+  }
 }
 
 .header__logo-description {
@@ -88,6 +93,11 @@
     display: flex;
     flex-shrink: 0;
     border-left: 1px solid $color-whisper;
+  }
+
+  @media (max-width: 386px) {
+    width: 47px;
+    min-height: 47px;
   }
 }
 
@@ -182,6 +192,11 @@
   @include vp-920 {
     margin-left: 0;
     border-color: $color-whisper;
+  }
+
+  @media (max-width: 386px) {
+    min-width: 47px;
+    min-height: 47px;
   }
 }
 

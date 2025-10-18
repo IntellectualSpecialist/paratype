@@ -14,7 +14,7 @@ const initSlider = (sliderElement) => {
   const totalSlides = slides.length;
 
   const startDrag = (evt) => {
-    if (evt.type === 'touchstart' && !evt.target.closest('.slider__pagination-button')) {
+    if (evt.type === 'touchstart' && !evt.target.closest('.slider__pagination-button') && !evt.target.closest('a')) {
       evt.preventDefault();
     }
 
